@@ -21,8 +21,9 @@ app.post('/dialogflow', express.json(), (req, res) => {
   function testTest() {
     agent.add('This is a test!')
   }
-	console.log(JSON.stringify(req.body))
-	console.log(agent.intent)
+	//console.log(req)
+	console.log(req.body)
+	//console.log(JSON.stringify(req.body))
 	//console.log(req.body.queryResult.fulfillmentMessages[0].text)
 	//console.log(req.body.queryResult.intent)
   let intentMap = new Map()

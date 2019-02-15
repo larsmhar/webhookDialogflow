@@ -1,0 +1,62 @@
+[debug] [2019-02-13T12:28:37.988Z] ----------------------------------------------------------------------
+[debug] [2019-02-13T12:28:37.990Z] Command:       /usr/bin/node /usr/bin/firebase init functions
+[debug] [2019-02-13T12:28:37.991Z] CLI Version:   6.3.1
+[debug] [2019-02-13T12:28:37.991Z] Platform:      linux
+[debug] [2019-02-13T12:28:37.991Z] Node Version:  v8.10.0
+[debug] [2019-02-13T12:28:37.991Z] Time:          Wed Feb 13 2019 13:28:37 GMT+0100 (CET)
+[debug] [2019-02-13T12:28:37.991Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-02-13T12:28:38.000Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-02-13T12:28:38.000Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/lars/Projects/webhookDialogflow
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, skipping
+[info] 
+=== Functions Setup
+[info] 
+[info] A functions directory will be created in your project with a Node.js
+[info] package pre-configured. Functions can be deployed with firebase deploy.
+[info] 
+[debug] [2019-02-13T12:28:38.006Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-02-13T12:28:38.006Z] > authorizing via signed-in user
+[debug] [2019-02-13T12:28:38.009Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/hurtighjelpern  
+ 
+[debug] [2019-02-13T12:28:38.329Z] <<< HTTP RESPONSE 200
+[debug] [2019-02-13T12:28:38.346Z] >>> HTTP REQUEST PATCH https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/hurtighjelpern?updateMask=usageSettings  
+
+[debug] [2019-02-13T12:28:38.347Z] >>> HTTP REQUEST PATCH https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/hurtighjelpern?updateMask=usageSettings  
+
+[info] ✔  Wrote functions/package.json
+[info] ✔  Wrote functions/.eslintrc.json
+[info] ✔  Wrote functions/index.js
+[info] ✔  Wrote functions/.gitignore
+[debug] [2019-02-13T12:28:40.616Z] <<< HTTP RESPONSE 200
+[debug] [2019-02-13T12:28:40.638Z] <<< HTTP RESPONSE 200
+[info] 
+[info] i  Writing configuration info to firebase.json...
+[info] i  Writing project information to .firebaserc...
+[debug] [2019-02-13T12:29:20.988Z] Error: EACCES: permission denied, open '/home/lars/Projects/webhookDialogflow/.firebaserc'
+    at Object.fs.openSync (fs.js:646:18)
+    at Object.fs.writeFileSync (fs.js:1299:33)
+    at Config.writeProjectFile (/usr/lib/node_modules/firebase-tools/lib/config.js:161:8)
+    at /usr/lib/node_modules/firebase-tools/lib/commands/init.js:137:16
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+[error] 
+[error] Error: An unexpected error has occurred.
