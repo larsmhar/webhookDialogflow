@@ -23,9 +23,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
     agent.add(`This is a webhookTest and this is a number between 0 and 100: ${randomNum}`)
   }
 
+  function getCurrentTime(agent) {
+    const currentDate = new Date();
+    agent.add(`The clock is past ${currentDate.getHours()} ${currentDate.getMinutes()}`)
+  }
+
   let intentMap = new Map();
   // Sets response functions based on intent
   // The first argument is the intent and the second is the response
   intentMap.set('webhookTest', webhookTest);
+  intentMap.set('getCurrentTime', getCurrentTime);
   agent.handleRequest(intentMap);
 })
